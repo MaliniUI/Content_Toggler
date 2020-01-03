@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
+  menuWidth = 0;
+
+  openNav() {
+  // document.getElementById("mySidenav").style.width = "250px";
+  this.menuWidth = 150;
+}
+
+  closeNav() {
+    // document.getElementById("mySidenav").style.width = "0";
+    this.menuWidth = 0;
+  }
 }

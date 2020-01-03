@@ -1,4 +1,22 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div class="myPage">
+    <div class="sidebar" id="mySideNav" [ngStyle]="{'width.px': menuWidth}">
+      <a href="javascript:void(0);" class="close-btn" (click)="closeNav()">&times;</a>
+      <a href="#art1" (click)="closeNav()" class="menu-item"> Article One </a>
+      <a href="#art2" (click)="closeNav()" class="menu-item" > Article two </a>
+      <a href="#art3" (click)="closeNav()" class="menu-item"> Article three </a>
+      <a href="#art4" (click)="closeNav()" class="menu-item"> Article four </a>
+      <a href="#art5" (click)="closeNav()" class="menu-item"> Article five </a>
+      <a href="#art6" (click)="closeNav()" class="menu-item"> Article six </a>
+    </div>
+    <div class="content-view">
+      <div class="hamburger" (click)="openNav()">&#9776;</div>
+        <div class="content-view-wrap">
+            <div id="art1" class="current-view">Art1</div>
+            <div id="art2" class="current-view">Art2</div>
+            <div id="art3" class="current-view">Art3</div>
+            <div id="art4" class="current-view">Art4</div>
+            <div id="art5" class="current-view">Art5</div>
+            <div id="art6" class="current-view">Art6</div>
+        </div>
+    </div>
+</div>
