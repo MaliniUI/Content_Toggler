@@ -1,22 +1,30 @@
 <div class="myPage">
     <div class="sidebar" id="mySideNav" [ngStyle]="{'width.px': menuWidth}">
       <a href="javascript:void(0);" class="close-btn" (click)="closeNav()">&times;</a>
-      <a href="#art1" (click)="closeNav()" class="menu-item"> Article One </a>
-      <a href="#art2" (click)="closeNav()" class="menu-item" > Article two </a>
-      <a href="#art3" (click)="closeNav()" class="menu-item"> Article three </a>
-      <a href="#art4" (click)="closeNav()" class="menu-item"> Article four </a>
-      <a href="#art5" (click)="closeNav()" class="menu-item"> Article five </a>
-      <a href="#art6" (click)="closeNav()" class="menu-item"> Article six </a>
+      <a (click)="scroll(art1)" class="menu-item"> Article One </a>
+      <a (click)="scroll(art2)" class="menu-item" > Article two </a>
+      <a (click)="scroll(art3)" class="menu-item"> Article three </a>
+      <a (click)="scroll(art4)" class="menu-item"> Article four </a>
+      <a (click)="scroll(art5)" class="menu-item"> Article five </a>
+      <a (click)="scroll(art6)" class="menu-item"> Article six </a>
+      <a (click)="scroll(art7)" class="menu-item"> Article seven </a>
+      <a (click)="scroll(art8)" class="menu-item"> Article eight </a>
+      <a (click)="scroll(art9)" class="menu-item"> Article nine </a>
     </div>
     <div class="content-view">
-      <div class="hamburger" (click)="openNav()">&#9776;</div>
-        <div class="content-view-wrap">
-            <div id="art1" class="current-view">Art1</div>
-            <div id="art2" class="current-view">Art2</div>
-            <div id="art3" class="current-view">Art3</div>
-            <div id="art4" class="current-view">Art4</div>
-            <div id="art5" class="current-view">Art5</div>
-            <div id="art6" class="current-view">Art6</div>
+      <div class="hamburger" (click)="openNav()">&#9776;
+        <h2>My Collections</h2>
+      </div>
+        <div class="content-view-wrap" [ngClass]="isScroll ? 'add-170-top' : 'add-100-top'">
+            <div #art1 class="current-view">Art1</div>
+            <div #art2 class="current-view">Art2</div>
+            <div #art3 class="current-view">Art3</div>
+            <div #art4 class="current-view">Art4</div>
+            <div #art5 class="current-view">Art5</div>
+            <div #art6 class="current-view">Art6</div>
+            <div #art7 class="current-view">Art7</div>
+            <div #art8 class="current-view">Art8</div>
+            <div #art9 class="current-view">Art9</div>
         </div>
     </div>
 </div>
